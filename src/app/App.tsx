@@ -1,32 +1,49 @@
-import './App.css';
+import { Box, Flex } from '@chakra-ui/react';
+import { Route, Routes } from 'react-router';
 
-import { useState } from 'react';
-
-import reactLogo from '~/assets/react.svg';
-import { useGetPostsQuery } from '~/query/services/posts.ts';
+import styles from '~/app/App.module.scss';
+import { Footer } from '~/components/Footer/Footer';
+import Header from '~/components/Header/Header';
+import ProfileBar from '~/components/ProfileBar/ProfileBar';
+import Sidebar from '~/components/Sidebar/Sidebar';
+import { HomePage } from '~/pages/HomePage/HomePage';
+import { JuiciestPage } from '~/pages/JuiciestPage/JuiciestPage';
+import { VeganPage } from '~/pages/VeganPage/VeganPage';
 
 function App() {
-    const [count, setCount] = useState(0);
-    const { data: _data, isLoading: _isLoading } = useGetPostsQuery();
-
     return (
         <>
-            <div>
-                <a href='https://vite.dev' target='_blank'>
-                    <img src='/vite.svg' className='logo' alt='Vite logo' />
-                </a>
-                <a href='https://react.dev' target='_blank'>
-                    <img src={reactLogo} className='logo react' alt='React logo' />
-                </a>
+            <div className={styles.wrapper}>
+                <Flex
+                    zIndex={10}
+                    bg='lime.50'
+                    top={0}
+                    position={{ xl: 'inherit', lg: 'inherit', md: 'fixed', sm: 'fixed' }}
+                >
+                    <Header />
+                </Flex>
+                <div className={styles.container}>
+                    <Sidebar />
+                    <Box
+                        w={{ xl: '1360px', lg: '880px', md: '100%', sm: '100%' }}
+                        marginBottom={{ xl: '0', lg: '0', md: '150px', sm: '150px' }}
+                    >
+                        <Routes>
+                            <Route index element={<HomePage />} />
+                            <Route path='/vegan/*' element={<VeganPage />} />
+                            <Route path='/juiciest' element={<JuiciestPage />} />
+                        </Routes>
+                    </Box>
+                    <ProfileBar />
+                </div>
+                <Flex
+                    display={{ xl: 'none', lg: 'none', md: 'flex', sm: 'flex' }}
+                    position={{ xl: 'inherit', lg: 'inherit', md: 'fixed', sm: 'fixed' }}
+                    bottom='0'
+                >
+                    <Footer />
+                </Flex>
             </div>
-            <h1>Vite + React</h1>
-            <div className='card'>
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
         </>
     );
 }

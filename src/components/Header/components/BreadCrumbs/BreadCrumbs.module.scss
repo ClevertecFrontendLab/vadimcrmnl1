@@ -1,0 +1,17 @@
+.text {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+.blackColor {
+  color: var(--primary-black);
+}
+.opacityBlackColor {
+  color: var(--primary-black);
+  opacity: 64%;
+}
