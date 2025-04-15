@@ -1,0 +1,72 @@
+@use "~/design-systems/colors" as *;
+
+.wrapper {
+  width: 1920px;
+  //width: 100%;
+  height: 80px;
+  background-color: var(--lime-50);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoBreadCrumbBlock {
+  display: flex;
+}
+
+.logoBlock {
+  margin-left: 16px;
+  //width: 256px;
+
+  img {
+    height: 32px;
+    width: 135.2px;
+  }
+}
+
+.breadcrumbsBlock {
+  margin-left: 24px;
+}
+
+.userBlock {
+  display: flex;
+  max-width: 432px;
+  margin-right: 56px;
+
+  .avatar {
+    margin: 0 12px 0 53px;
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+  }
+
+  .userName {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-family: Inter, sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--primary-black);
+    }
+
+    span {
+      font-family: Inter, sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--primary-black);
+      opacity: 64%;
+    }
+  }
+}

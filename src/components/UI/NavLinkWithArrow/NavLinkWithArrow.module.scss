@@ -1,0 +1,33 @@
+.linkButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    gap: 8px;
+    background-color: var(--lime-400);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: var(--lime-100);
+        text-decoration: none;
+    }
+}
+
+.linkButtonWithoutBg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    gap: 8px;
+    background: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: var(--lime-100);
+        text-decoration: none;
+    }
+}

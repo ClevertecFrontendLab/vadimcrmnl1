@@ -1,0 +1,46 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+.container {
+  // width: 1360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderContainer {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.juiciesContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+
+  //.linkButton {
+  //  display: flex;
+  //  justify-content: center;
+  //  align-items: center;
+  //  padding: 0 24px;
+  //  gap: 8px;
+  //  background-color: var(--lime-400);
+  //  border-radius: 6px;
+  //  text-decoration: none;
+  //  transition: 0.3s;
+  //
+  //  &:hover {
+  //    background-color: var(--lime-100);
+  //    text-decoration: none;
+  //  }
+  //}
+}

@@ -1,0 +1,40 @@
+.item {
+  width: 230px;
+  margin: 0 0 0 10px;
+  border: none;
+  background: none;
+  border-radius: 0;
+  &:hover {
+    color: var(--primary-black);
+  }
+
+  .itemButton {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 8px;
+    gap: 12px;
+    border: none;
+    white-space: nowrap;
+    border-radius: 0;
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      border-radius: 0;
+      background-color: var(--lime-50);
+    }
+  }
+
+  .itemBox {
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:hover {
+      color: var(--primary-black);
+    }
+  }
+
+}
